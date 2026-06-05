@@ -1,6 +1,6 @@
 {
   "name": "keepa-mcp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "MCP server for Keepa Amazon price and sales rank history API",
   "type": "module",
   "mcpName": "io.github.purahmanian/keepa-mcp",

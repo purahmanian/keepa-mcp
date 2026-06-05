@@ -89,7 +89,7 @@ async function withKey<TParams>(
 
 const server = new McpServer({
   name: "keepa-mcp",
-  version: "0.1.0",
+  version: "0.1.1",
 });
 
 // ----- get_product ----------------------------------------------------------

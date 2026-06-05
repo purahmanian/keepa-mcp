@@ -177,6 +177,15 @@ Part of the **Product-Research MCP Suite**:
 
 ---
 
+## Privacy
+
+This server runs entirely on your machine. It collects no telemetry and stores
+no data. The only network calls it makes are to the Keepa API
+(api.keepa.com), sending your API key and the ASINs, keywords, or category ids
+you ask about. Your API key is read from the KEEPA_API_KEY environment variable
+and never written to disk or sent anywhere except Keepa. See Keepa's privacy
+policy: https://keepa.com/#!privacy
+
 ## License
 
 MIT. See [LICENSE](./LICENSE).

@@ -1,0 +1,88 @@
+{
+  "manifest_version": "0.3",
+  "version": "0.1.1",
+  "author": {
+    "name": "Puya Rahmanian",
+    "email": "purahmanian@gmail.com",
+    "url": "https://puyarahmanian.com"
+  },
+  "license": "MIT",
+  "compatibility": {
+    "platforms": [
+      "darwin",
+      "win32",
+      "linux"
+    ],
+    "runtimes": {
+      "node": ">=18.0.0"
+    }
+  },
+  "name": "keepa-mcp",
+  "display_name": "Keepa Amazon Price History",
+  "description": "Amazon price and sales-rank history via the Keepa API",
+  "long_description": "Gives Claude live access to Keepa data: current product details, decoded price history, sales-rank demand trends, product search, category best sellers, and current price-drop deals. Requires a Keepa API key.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/purahmanian/keepa-mcp.git"
+  },
+  "homepage": "https://github.com/purahmanian/keepa-mcp",
+  "support": "https://github.com/purahmanian/keepa-mcp/issues",
+  "server": {
+    "type": "node",
+    "entry_point": "dist/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/dist/index.js"
+      ],
+      "env": {
+        "KEEPA_API_KEY": "${user_config.keepa_api_key}"
+      }
+    }
+  },
+  "user_config": {
+    "keepa_api_key": {
+      "type": "string",
+      "title": "Keepa API Key",
+      "description": "Get a key at https://keepa.com/#!api",
+      "sensitive": true,
+      "required": true
+    }
+  },
+  "tools": [
+    {
+      "name": "get_product",
+      "description": "Current product details, prices, rating for an ASIN"
+    },
+    {
+      "name": "get_price_history",
+      "description": "Decoded historical price series for an ASIN"
+    },
+    {
+      "name": "get_sales_rank_history",
+      "description": "Sales rank history with demand trend summary"
+    },
+    {
+      "name": "search_products",
+      "description": "Search Amazon products by keyword"
+    },
+    {
+      "name": "get_best_sellers",
+      "description": "Top ASINs in a category"
+    },
+    {
+      "name": "get_deals",
+      "description": "Current price-drop deals"
+    }
+  ],
+  "keywords": [
+    "amazon",
+    "keepa",
+    "price history",
+    "product research",
+    "mcp"
+  ],
+  "privacy_policies": [
+    "https://keepa.com/#!privacy"
+  ]
+}
