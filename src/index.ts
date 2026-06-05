@@ -54,10 +54,16 @@ function requireKey(): string {
 async function withKey<TParams>(
   params: TParams,
   fn: (p: TParams, key: string) => Promise<string>
-): Promise<{ content: Array<{ type: "text"; text: string }> }> {
+): Promise<{
+  content: Array<{ type: "text"; text: string }>;
+  isError?: boolean;
+}> {
   const key = requireKey();
   if (!key) {
-    return { content: [{ type: "text", text: MISSING_KEY_MSG }] };
+    return {
+      content: [{ type: "text", text: MISSING_KEY_MSG }],
+      isError: true,
+    };
   }
   try {
     const text = await fn(params, key);
@@ -72,6 +78,7 @@ async function withKey<TParams>(
           text: `Error: ${message}`,
         },
       ],
+      isError: true,
     };
   }
 }

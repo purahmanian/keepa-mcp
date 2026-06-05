@@ -89,6 +89,25 @@ describe("get_product tool", () => {
     ).rejects.toThrow(/token quota/i);
   });
 
+  it("surfaces Keepa's structured error body on HTTP 400", async () => {
+    mockFetch.mockResolvedValueOnce({
+      ok: false,
+      status: 400,
+      statusText: "Bad Request",
+      json: () =>
+        Promise.resolve({
+          error: {
+            message: "You used an invalid parameter for this API call.",
+            type: "invalidParameter",
+          },
+        }),
+    });
+
+    await expect(
+      runGetProduct({ asin: "B08N5WRWNW", domain: 1 }, FAKE_KEY)
+    ).rejects.toThrow(/invalidParameter.*invalid parameter/i);
+  });
+
   it("handles missing csv array gracefully", async () => {
     const noHistory = {
       products: [

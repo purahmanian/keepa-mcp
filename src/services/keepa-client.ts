@@ -165,23 +165,43 @@ export async function keepaFetch<T>(
   });
 
   if (!response.ok) {
+    // Keepa returns a structured error body on most 4xx responses, e.g.
+    // {"error":{"message":"...","type":"invalidParameter"}}. Surface it when
+    // present so the caller sees Keepa's actual reason (an invalid API key
+    // also arrives as a 400 here, not a 401).
+    let upstream = "";
+    try {
+      if (typeof response.json === "function") {
+        const body = (await response.json()) as {
+          error?: { message?: string; type?: string };
+        };
+        if (body?.error?.message) {
+          upstream = ` Keepa says (${body.error.type ?? "error"}): ${body.error.message}`;
+        }
+      }
+    } catch {
+      // Non-JSON body; fall through to the generic message.
+    }
+
     if (response.status === 400) {
       throw new Error(
-        "Bad request (400). Check that your ASIN, category id, or query is valid."
+        "Bad request (400). Check that your API key is valid and that the " +
+          `ASIN, category id, or query is well formed.${upstream}`
       );
     }
     if (response.status === 402) {
       throw new Error(
-        "Keepa token quota exceeded (402). Wait for your token bucket to refill (typically 1 minute)."
+        "Keepa token quota exceeded (402). Wait for your token bucket to " +
+          `refill (typically 1 minute).${upstream}`
       );
     }
     if (response.status === 429) {
       throw new Error(
-        "Rate limited by Keepa (429). Slow down requests or upgrade your plan."
+        `Rate limited by Keepa (429). Slow down requests or upgrade your plan.${upstream}`
       );
     }
     throw new Error(
-      `Keepa API error: HTTP ${response.status} ${response.statusText}`
+      `Keepa API error: HTTP ${response.status} ${response.statusText}.${upstream}`
     );
   }
 
