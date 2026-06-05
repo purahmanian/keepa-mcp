@@ -1,0 +1,37 @@
+{
+  "dr": [
+    {
+      "asin": "B08N5WRWNW",
+      "title": "Echo Dot (4th Gen) | Smart speaker with Alexa | Charcoal",
+      "brand": "Amazon",
+      "current": [2999, 2999, 2500, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 2999],
+      "reviews": {
+        "rating": 46,
+        "reviewCount": 185432
+      },
+      "csv": [
+        [7895753, 4999, 8068553, 4999, 8113193, 2999],
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "asin": "B07PXGQC1Q",
+      "title": "Fire TV Stick 4K with Alexa Voice Remote",
+      "brand": "Amazon",
+      "current": [2499, 2499, 1800, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 2499],
+      "reviews": {
+        "rating": 45,
+        "reviewCount": 72341
+      },
+      "csv": [
+        [7895753, 4999, 8068553, 4999, 8113193, 2499],
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "tokensLeft": 7000
+}

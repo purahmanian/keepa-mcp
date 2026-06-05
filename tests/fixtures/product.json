@@ -1,0 +1,71 @@
+{
+  "products": [
+    {
+      "asin": "B08N5WRWNW",
+      "title": "Echo Dot (4th Gen) | Smart speaker with Alexa | Charcoal",
+      "brand": "Amazon",
+      "manufacturer": "Amazon",
+      "categoryTree": [
+        { "catId": 172282, "name": "Electronics" },
+        { "catId": 9967136011, "name": "Smart Home" },
+        { "catId": 17322656011, "name": "Voice Assistants" }
+      ],
+      "rootCategory": 172282,
+      "productGroup": "Consumer Electronics",
+      "newOfferCount": 12,
+      "usedOfferCount": 4,
+      "reviews": {
+        "rating": 46,
+        "reviewCount": 185432
+      },
+      "current": [
+        4999,
+        4899,
+        3200,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        4999,
+        -1
+      ],
+      "csv": [
+        [7895753, 4999, 7940393, 4799, 7980713, 4999, 8025353, 4899, 8068553, 4999],
+        [7895753, 4899, 7940393, 4799, 7980713, 4899, 8025353, 4799, 8068553, 4899],
+        [7895753, 3200, 7940393, 3100, 7980713, 3200, 8025353, 3100, 8068553, 3200],
+        [7895753, 35000, 7940393, 34000, 7980713, 33000, 8025353, 32000, 8068553, 31000],
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        [7895753, 4999, 7940393, 4799, 7980713, 4999, 8025353, 4899, 8068553, 4999],
+        null
+      ]
+    }
+  ],
+  "tokensLeft": 8500,
+  "refillIn": 45000,
+  "refillRate": 100,
+  "timestamp": 1717200000000
+}
