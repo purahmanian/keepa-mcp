@@ -166,10 +166,9 @@ tests/
 
 ## Built by
 
-I build custom MCP servers and AI integrations for product-research,
-e-commerce, and SaaS teams. Get in touch: **purahmanian@gmail.com**
-
-Portfolio: _coming soon_
+Built by **Puya Ventures LLC**. I build custom MCP servers and AI integrations
+for product-research, e-commerce, and SaaS teams. Get in touch:
+**purahmanian@gmail.com**
 
 ---
 

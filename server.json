@@ -1,0 +1,29 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.purahmanian/keepa-mcp",
+  "description": "MCP server for Keepa Amazon price and sales rank history API",
+  "repository": {
+    "url": "https://github.com/purahmanian/keepa-mcp",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "keepa-mcp",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "KEEPA_API_KEY",
+          "description": "Keepa API key (https://keepa.com/#!api)",
+          "isRequired": true,
+          "isSecret": true,
+          "format": "string"
+        }
+      ]
+    }
+  ]
+}
