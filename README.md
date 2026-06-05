@@ -168,7 +168,12 @@ tests/
 
 Built by **Puya Ventures LLC**. I build custom MCP servers and AI integrations
 for product-research, e-commerce, and SaaS teams. Get in touch:
-**purahmanian@gmail.com**
+**purahmanian@gmail.com** | Portfolio: [puyarahmanian.com](https://puyarahmanian.com)
+
+Part of the **Product-Research MCP Suite**:
+[keepa-mcp](https://github.com/purahmanian/keepa-mcp) ·
+[google-trends-mcp](https://github.com/purahmanian/google-trends-mcp) ·
+[junglescout-mcp](https://github.com/purahmanian/junglescout-mcp)
 
 ---
 
